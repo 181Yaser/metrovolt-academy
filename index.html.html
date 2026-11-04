@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071a33">
+  <meta name="description" content="Metro Electrical Academy — أكاديمية كهرباء المترو">
+  <title>Metro Electrical Academy</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="logo" aria-hidden="true"><span>🚇</span><b>⚡</b></div>
+    <div><strong>METRO ELECTRICAL</strong><small>ACADEMY | أكاديمية كهرباء المترو</small></div>
+  </div>
+  <button id="langBtn" class="ghost" type="button">EN</button>
+</header>
+<main>
+  <section class="hero">
+    <p class="eyebrow" data-ar="منصة التعلم والحفظ الهندسي" data-en="Engineering learning & knowledge hub">منصة التعلم والحفظ الهندسي</p>
+    <h1 data-ar="اتعلّم. طبّق. احفظ." data-en="LEARN. PRACTICE. SAVE.">اتعلّم. طبّق. احفظ.</h1>
+    <p data-ar="مرجعك الشخصي لفهم كهرباء تصنيع وصيانة قطارات المترو." data-en="Your personal reference for metro train electrical manufacturing and maintenance.">مرجعك الشخصي لفهم كهرباء تصنيع وصيانة قطارات المترو.</p>
+    <div class="hero-actions">
+      <a class="primary" href="#library" data-ar="افتح مكتبتي" data-en="Open my library">افتح مكتبتي</a>
+      <a class="secondary" href="#addLesson" data-ar="أضف درسًا" data-en="Add a lesson">أضف درسًا</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div><p class="eyebrow" data-ar="مسارات الأكاديمية" data-en="ACADEMY PATHS">مسارات الأكاديمية</p><h2 data-ar="ابدأ من القسم المناسب" data-en="Choose a learning path">ابدأ من القسم المناسب</h2></div></div>
+    <div id="categories" class="cards"></div>
+  </section>
+
+  <section id="addLesson" class="section panel">
+    <p class="eyebrow" data-ar="دفتر الملاحظات" data-en="YOUR NOTEBOOK">دفتر الملاحظات</p>
+    <h2 data-ar="احفظ درسًا جديدًا" data-en="Save a new lesson">احفظ درسًا جديدًا</h2>
+    <form id="lessonForm">
+      <label><span data-ar="عنوان الدرس" data-en="Lesson title">عنوان الدرس</span><input id="lessonTitle" required maxlength="100" placeholder="مثال: Introduction to Underframe Wiring"></label>
+      <label><span data-ar="القسم" data-en="Category">القسم</span><select id="lessonCategory"></select></label>
+      <label><span data-ar="الملاحظات والمعلومات" data-en="Notes and information">الملاحظات والمعلومات</span><textarea id="lessonBody" required rows="5" placeholder="اكتب شرح الدرس أو الملاحظات هنا..."></textarea></label>
+      <button class="primary submit" type="submit" data-ar="حفظ الدرس على هذا الجهاز" data-en="Save lesson on this device">حفظ الدرس على هذا الجهاز</button>
+      <p class="hint" data-ar="النسخة الأولى تحفظ الدروس داخل متصفح الجهاز الحالي. لا ترفعها إلى الإنترنت بعد." data-en="This first version stores lessons in this browser on this device. They are not uploaded online yet.">النسخة الأولى تحفظ الدروس داخل متصفح الجهاز الحالي. لا ترفعها إلى الإنترنت بعد.</p>
+    </form>
+  </section>
+
+  <section id="library" class="section">
+    <div class="section-head"><div><p class="eyebrow" data-ar="مكتبتك" data-en="YOUR LIBRARY">مكتبتك</p><h2 data-ar="الدروس المحفوظة" data-en="Saved lessons">الدروس المحفوظة</h2></div><span id="count" class="count">0</span></div>
+    <input id="search" class="search" type="search" placeholder="ابحث في دروسك / Search lessons">
+    <div id="lessons" class="lesson-list"><div class="empty">لسه مفيش دروس محفوظة. أضف أول درس من النموذج بالأعلى.</div></div>
+  </section>
+</main>
+<footer><strong>METRO ELECTRICAL ACADEMY</strong><span>نسخة أولى تجريبية · الإصدار 0.1</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
