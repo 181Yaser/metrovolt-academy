@@ -1,0 +1,10 @@
+{
+  "name": "Metro Electrical Academy",
+  "short_name": "Metro Academy",
+  "description": "أكاديمية كهرباء المترو",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#071a33",
+  "theme_color": "#071a33",
+  "icons": []
+}
